@@ -2,6 +2,7 @@ from .Dialog import Dialog
 from .Session import Session
 from .Tab import Tab
 from .Window import Window
+from .SessionConfiguration import SessionConfiguration
 
 class CRT:
   def __init__(self, crt):
@@ -76,7 +77,7 @@ class CRT:
     return self.crt.GetTabCount()
 
   def OpenSessionConfiguration(self):
-    return self.crt.OpenSessionConfiguration()
+    return SessionConfiguration(self.crt)
 
   def Quit(self):
     return self.crt.Quit()
