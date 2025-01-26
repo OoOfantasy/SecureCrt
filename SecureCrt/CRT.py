@@ -2,11 +2,15 @@ from .Dialog import Dialog
 from .Session import Session
 from .Tab import Tab
 from .Window import Window
-from .SessionConfiguration import SessionConfiguration
+from .Configuration import SessionConfiguration, GlobalConfiguration
 
 class CRT:
   def __init__(self, crt):
     self.crt = crt
+
+  @property
+  def Config(self):
+    return GlobalConfiguration(self.crt.Config)
 
   @property
   def ActivePrinter(self):

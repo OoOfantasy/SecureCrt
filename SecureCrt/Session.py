@@ -4,7 +4,7 @@ class Session:
     
     @property
     def Config(self):
-        from .SessionConfiguration import SessionConfiguration
+        from .Configuration import SessionConfiguration
         return SessionConfiguration(self.obj.Session.Config)
     
     @property
