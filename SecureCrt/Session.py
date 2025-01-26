@@ -4,7 +4,8 @@ class Session:
     
     @property
     def Config(self):
-        return self.obj.Session.Config
+        from .SessionConfiguration import SessionConfiguration
+        return SessionConfiguration(self.obj.Session.Config)
     
     @property
     def Connected(self):

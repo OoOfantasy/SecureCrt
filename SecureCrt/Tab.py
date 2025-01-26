@@ -1,6 +1,3 @@
-from .Session import Session
-from .Screen import Screen
-
 class Tab:
     def __init__(self, obj):
         self.obj = obj
@@ -22,11 +19,13 @@ class Tab:
     @property
     def Screen(self):
         """ 返回与选项卡关联的Screen对象 """
+        from .Screen import Screen
         return Screen(self.obj)
     
     @property
     def Session(self):
         """ 返回与选项卡关联的Session对象 """
+        from .Session import Session
         return Session(self.obj)
 
     def Activate(self):

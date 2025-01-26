@@ -76,8 +76,8 @@ class CRT:
   def GetTabCount(self):
     return self.crt.GetTabCount()
 
-  def OpenSessionConfiguration(self):
-    return SessionConfiguration(self.crt)
+  def OpenSessionConfiguration(self, SessionPath: str = "Default"):
+    return SessionConfiguration(self.crt.OpenSessionConfiguration(SessionPath))
 
   def Quit(self):
     return self.crt.Quit()
