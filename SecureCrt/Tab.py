@@ -4,7 +4,7 @@ class Tab:
 
     @property
     def Caption(self) -> str:
-        """ 返回或设置选项卡的标题 """
+        """ 返回/设置选项卡标题 """
         return self.obj.Caption
 
     @Caption.setter
@@ -13,18 +13,18 @@ class Tab:
     
     @property
     def Index(self) -> int:
-        """ 返回选项卡的索引 """
+        """ 返回选项卡索引 """
         return self.obj.Index
     
     @property
     def Screen(self):
-        """ 返回与选项卡关联的Screen对象 """
+        """ 返回选项卡Screen对象 """
         from .Screen import Screen
         return Screen(self.obj)
     
     @property
     def Session(self):
-        """ 返回与选项卡关联的Session对象 """
+        """ 返回选项卡Session对象 """
         from .Session import Session
         return Session(self.obj)
 
