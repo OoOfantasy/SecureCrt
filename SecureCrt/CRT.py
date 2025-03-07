@@ -27,7 +27,7 @@ class CRT:
 
     @property
     def Arguments(self):
-        return Arguments(self.crt.Arguments)
+        return Arguments(self.crt)
 
     @property
     def Clipboard(self):
@@ -59,7 +59,7 @@ class CRT:
 
     @property
     def Window(self):
-        return Window(self.crt)
+        return Window(self.crt.Window)
 
     @property
     def CommandWindow(self):
